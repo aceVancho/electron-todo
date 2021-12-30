@@ -1,4 +1,5 @@
 import { types, getSnapshot } from 'mobx-state-tree';
+import makeInspectable from 'mobx-devtools-mst';
 import ToDoList from '../Models/ToDoList';
 import ToDo from '../Models/Todo';
 
@@ -13,7 +14,7 @@ const ToDoStore = types
     // code here
   }));
 
-const store = ToDoStore.create();
+const store = makeInspectable(ToDoStore.create());
 
 // TEST
 const todo = ToDo.create({
