@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { observer } from 'mobx-react';
 import store from '../Stores/ToDoStore';
 
 const ToDoList = () => {
@@ -11,4 +12,4 @@ const ToDoList = () => {
   );
 };
 
-export default ToDoList;
+export default observer(ToDoList);

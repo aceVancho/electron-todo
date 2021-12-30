@@ -229,6 +229,7 @@
     "history": "^5.2.0",
     "mobx": "^6.3.10",
     "mobx-devtools-mst": "^0.9.30",
+    "mobx-react": "^7.2.1",
     "mobx-react-lite": "^3.2.2",
     "mobx-state-tree": "^5.1.0",
     "mst-middlewares": "^5.1.0",
