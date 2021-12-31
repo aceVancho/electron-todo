@@ -7,6 +7,12 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-console': 'off',
     'react/prop-types': 'off',
+    "react/jsx-props-no-spreading": [<disable>, {
+      "html": "ignore" | "enforce",
+      "custom": "ignore" | "enforce",
+      "explicitSpread": "ignore" | "enforce",
+      "exceptions": [<string>]
+  }]
   },
   parserOptions: {
     ecmaVersion: 2020,

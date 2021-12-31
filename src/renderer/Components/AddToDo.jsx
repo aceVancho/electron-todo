@@ -16,7 +16,7 @@ const AddItemButtonAndInput = () => {
             id: uuidv4(),
           })
         );
-        console.log('STORE SNAPSHOT ON CLICK:', getSnapshot(store));
+        e.currentTarget.reset()
       }}
     >
       <label htmlFor="addToDo">
