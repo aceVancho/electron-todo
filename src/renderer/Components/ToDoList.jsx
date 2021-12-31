@@ -1,13 +1,17 @@
-import { v4 as uuidv4 } from 'uuid';
 import { observer } from 'mobx-react';
 import store from '../Stores/ToDoStore';
+import ToDo from './ToDo';
 
 const ToDoList = () => {
   return (
     <ul>
-      {store.toDoItemList.toDoItems.map((todo) => (
-        <li key={uuidv4()}>{todo.name}</li>
-      ))}
+      {store.toDoItemList.toDoItems.map((todo) => {
+        let props = {};
+        return (
+          <ToDo name={todo.name} id={todo.id} isComplete={todo.isComplete} />
+        );
+      })}
+      <br />
     </ul>
   );
 };

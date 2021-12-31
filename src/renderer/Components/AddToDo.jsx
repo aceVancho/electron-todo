@@ -1,19 +1,19 @@
 import { getSnapshot } from 'mobx-state-tree';
+import { v4 as uuidv4 } from 'uuid';
 import store from '../Stores/ToDoStore';
 import ToDo from '../Models/Todo';
 
 const AddItemButtonAndInput = () => {
   return (
-    // TODO: use a form instead
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        console.log('I submited');
         store.toDoItemList.addNewItem(
           ToDo.create({
             // TODO: use input from value
             name: this.nameInput.value,
             isComplete: false,
+            id: uuidv4(),
           })
         );
         console.log('STORE SNAPSHOT ON CLICK:', getSnapshot(store));

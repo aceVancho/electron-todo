@@ -18,8 +18,9 @@ const store = makeInspectable(ToDoStore.create());
 
 // TEST
 const todo = ToDo.create({
-  name: 'item1',
+  name: 'Feed the spider.',
   isComplete: false,
+  id: '0001',
 });
 
 store.toDoItemList.addNewItem(todo);

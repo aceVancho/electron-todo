@@ -9,6 +9,9 @@ const ToDoList = types
     addNewItem(toDoItem) {
       self.toDoItems.push(toDoItem);
     },
+    findTodo(id) {
+      return self.toDoItems.find((todo) => todo.id === id);
+    },
   }));
 
 export default ToDoList;
